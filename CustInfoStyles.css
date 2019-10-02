@@ -1,0 +1,13 @@
+body {background-color:aliceblue}
+img {display:block; margin-left:auto; margin-right:auto; width:50px; height:50px}
+h1 {text-align:center; color:black}
+.par {text-align:center; color:black}
+#submit {text-decoration:underline}
+form {text-align:center; border:3px solid silver; color:black; margin-left:auto; margin-right:auto; width:200px}
+button {display:block; margin-left:auto; margin-right:auto; background-color:silver}
+#showDate {text-align: center}
+#showName{text-align: center}
+#showEmail{text-align: center}
+#showSuccessfulSubmit{text-align: center}
+
+

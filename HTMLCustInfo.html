@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="CustInfoStyles.css">
+		<title> HTML Customer Information </title>
+	</head>
+	<body>
+		<img src="customer.jpg" alt="Customer Figure">
+		<h1> Customer Information </h1>
+		<p class="par">Please enter your first name, last name, and email address.</p>
+		<p class="par">Once you finish, please click the <mark><span id="submit">submit</span></mark> button below.</p>
+		<!-- This is a comment -->
+		<form name="myForm"> <br>
+			First Name: <input title="Type your first name" type="text" id="firstname" name="firstname"> <br><br>
+			Last Name: <input title="Type your last name" type="text" id="lastname" name="lastname"> <br><br>
+			Email: <input title="Type your email address" type="email" id="email" name="emailaddress"> <br><br>
+		</form>
+		<br>
+		
+		<!-- Shows the current date, but comment out for this assignment -->
+		<!--<button title="Show today's date" onclick="document.getElementById('showDate').innerHTML = Date()"> Show date </button>
+		<br>
+		<p id="showDate"></p> -->
+		
+		<button title="Submit your information" onclick="getInfo()"> Submit </button>
+		<p id="showName"></p>
+		<p id="showEmail"></p>
+		<p id="showSuccessfulSubmit"></p>
+		<script>
+		function getInfo()
+		{
+		var fn = document.getElementById("firstname").value;
+		// Another way to display the above line
+		// var fn = document.forms["myForm"]["firstname"].value;
+		var ln = document.getElementById("lastname").value;
+		var em = document.getElementById("email").value;
+		if (fn == "") {alert("Please enter your first name"); return false;}
+		if (ln == "") {alert("Please enter your last name"); return false;}
+		if (em == "") {alert("Please enter your email address"); return false;}
+		
+		var fullName = fn + " " + ln;
+		document.getElementById("showName").innerHTML = 'Your name is ' + fullName;
+		document.getElementById("showEmail").innerHTML = 'Your email is ' + em;
+		document.getElementById("showSuccessfulSubmit").innerHTML = 'Information submitted successfully';
+		}
+		</script>
+		
+	</body>
+</html>
